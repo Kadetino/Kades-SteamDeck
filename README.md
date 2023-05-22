@@ -15,6 +15,7 @@ What I use for my own Steam deck.
 - [SSH / File transfer](#SSH-File-transfer)
 - [Emulation](#Emulation)
 - [External game resolutions and upscaling](#External-game-resolutions-and-upscaling)
+- [Streaming to other devices with Steam link](#Streaming-to-other-devices-with-Steam-link)
 - [Performance](#Performance)
 ---
 ## Hardware
@@ -252,6 +253,8 @@ The resolution that can be set within individual game’s properties by clicking
 
 ![resolution1.jpg](images/resolution1.jpg)
 
+Native Steam deck resolution is 1280 x 800px (16:10 aspect ratio)
+
 Upscaling:
 * Ingame — **FSR2.0** costs around 10fps in performance.
 * Ingame — **TAAU/TSR** costs around 5fps in performance.
@@ -264,10 +267,115 @@ Steam OS upscaling can be set in the overlay:
 * SteamOS Upscaling — **Nearest** is the same as Integer at integer resolutions, but not as good at non integer resolutions. Cost is minimal too.
 * SteamOS Upscaling — **Linear** looks the worst and introduces blur at low resolutions, but costs nothing.
 ---
+## Streaming to other devices with Steam link
+If you want to use your laptop, tablet or phone as display,
+you can use Valve [Steam link](https://store.steampowered.com/app/353380/Steam_Link)
+to stream apps and games from your Steam deck.
+
+It's built-in into Steam client for PC or needs to be downloaded
+for tablets and phones as separate app.
+
+Useful when:
+* Streaming games to your friends in Discord.
+* Using OBS on your laptop to record gameplay from your Steam deck.
+* Needing another display which has brains of it's own and doesn't work like
+external monitor or TV.
+
+### PC (Laptop/Desktop)
+* Needs Steam client installed on PC and both devices be logged on in the same account.
+* Might need to enable Remote play in the Steam settings.
+
+![steamlink-remoteplay.jpg](images/steamlink-remoteplay.jpg)
+
+* on PC, you will see you library be extended by the library from your deck and vice versa.
+* `Play` button will be replaced by `Stream` button. If it doesn't show, then click
+arrow down, next to `Install`/`Play`/`Stream`, to select device that will run the game.
+
+![steamlink-button.jpg](images/steamlink-button.jpg)
+
+### Mobile devices (Tablets/Phones)
+* Download Steam link to your device.
+* Follow in-app instructions.
+* Pretty much the same as PC.
+
+### Connection
+Around 40 Mbit/s is fine.
+
+###### Wireless
+You need both devices to be connected to the same network, e. g. same Wi-Fi.
+
+Preferably, use 5 GHz frequency and Wi-Fi 5 (IEEE 802.11ac) or higher 
+(backwards compatibility; deck can't use better standard than 802.11ac).
+
+**Pros:**
+* Wireless
+* Easy to set up
+
+**Cons:**
+* Latency
+* Occasional stutters
+* You need Wi-Fi router and get all Wi-Fi related problems, especially at 2.4 GHz.
+###### Ethernet
+* You need a way to connect your devices via Ethernet cable.
+  * I use official docking station, laptop with Ethernet-to-USB adapter
+  and 100Mbit/s Ethernet cable.
+* On your laptop/tablet, nothing needs to be done, as far as I know.
+* On your Steam deck, you need to change Wired connection IPV4 method to `Link-Local`.
+
+![steamlink-ethernet.jpg](images/steamlink-ethernet.jpg)
+
+* If your recieving device is connected to Wi-Fi, you might need to disable
+Wi-Fi module to force Steam link to use wired connection. This might happen if 
+it thinks bandwidth is better via Wi-Fi.
+
+**Pros:**
+* More responsive
+* Doesn't depend on Wi-Fi routers
+* Doesn't get wireless protocols problems
+
+**Cons:**
+* Wires
+* Might be weird, if your bandwidth is better on Wi-Fi than on Ethernet
+
+---
 ## Performance
 ### Swapfile, VRAM and swap frequency
 Use [Cryo Utilities](https://github.com/CryoByte33/steam-deck-utilities) to  change them. Should make 
-games and emulators run smoother.
+games and emulators run smoother in most of the cases.
+
+Note on increasing VRAM to 4GB:
+* Steam Deck has 16GB unified RAM, meaning it can act both as regular RAM and VRAM.
+* Default minimum VRAM is set to 1 GB, but may be set higher in BIOS settings. 
+* Depending on workload the GPU can access up to 8 GB. 
+
+
+*  It's better if you can increase swapfile size, but you need to consider how much storage space will be left,
+if you only have 64GB storage memory.
+* Increasing the reserved amount of VRAM lowers the available regular RAM, 
+so the larger swapfile makes sure you always have enough RAM available 
+that the system doesn't lock up.
+
+
+* As far as the benefits of increasing the minimum VRAM, 
+the steam deck automatically allocates the RAM as either standard RAM or VRAM 
+as needed.
+* The problem is that it gives priority to regular RAM, 
+so games that demand a lot of regular RAM and VRAM will give almost all 
+of it to regular RAM, and only reserve 1GB for VRAM, 
+if you haven't changed the value in BIOS settings.
+
+
+* Most demanding games run better with 12GB (+swapfile) of standard RAM + 
+4gb of VRAM than with 15Gb of RAM and 1Gb of VRAM. 
+It still isn't getting as much RAM or VRAM as it wants,
+but the balance is better and neither is so small that it's unusable. 
+The only time this should hurt performance is in games that don't need more than 
+1GB of VRAM, but need 12+GB of standard RAM.
+
+### FSR
+Sometimes, SteamOS FSR is better than ingame FSR performance-wise.
+
+Disable ingame FSR and enable SteamOS one.
 ### DirectX
 Steam provides shader cache to their Deck approved games, 
 so that would reduce shader compilation which does cause stutter.
