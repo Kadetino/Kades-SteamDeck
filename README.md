@@ -17,6 +17,7 @@ What I use for my own Steam deck.
 - [External game resolutions and upscaling](#External-game-resolutions-and-upscaling)
 - [Streaming to other devices with Steam link](#Streaming-to-other-devices-with-Steam-link)
 - [Performance](#Performance)
+- [TODO List](#TODO-List)
 ---
 ## Hardware
 ### Model
@@ -30,7 +31,13 @@ What I use for my own Steam deck.
   * There’s a **5,313mAh battery** inside the Steam Deck.
 ### Controllers
 * 2x **_Playstation DualShock 3_**
-  * Charged controllers via USB cables, which were connected to the docking station and plugged in powered Steam Deck. Then connected via Bluetooth. Works out-of-the-box.
+  * Charged controllers via USB cables, which were connected to the docking station and plugged in powered Steam Deck. 
+    Then connected both of them via Bluetooth. Works out-of-the-box.
+* 1x **_Playstation DualShock 4_**
+  * Bluetooth connection: hold down `PS Button` and `SHARE Button` 
+    at the same time to enable pairing mode to make it available and visible for Steam deck.
+  * Wired conenction: just plug it in.
+  * You may change controller LED color in Steam controller settings.
 ### SD Card
 * Kingston Canvas Go! Plus 256GB
 
@@ -287,7 +294,7 @@ external monitor or TV.
 
 ![steamlink-remoteplay.jpg](images/steamlink-remoteplay.jpg)
 
-* on PC, you will see you library be extended by the library from your deck and vice versa.
+* on PC, you will see your library be extended by the library from your deck and vice versa.
 * `Play` button will be replaced by `Stream` button. If it doesn't show, then click
 arrow down, next to `Install`/`Play`/`Stream`, to select device that will run the game.
 
@@ -393,3 +400,13 @@ Lock the framerate limit to 30 and disable any in-game vsync.
 ### More power to CPU
 In CPU-heavy games, try to give CPU some more power budget by locking 
 the GPU frequency to a lower value like 1200mhz.
+---
+## TODO List
+Generally, it's the stuff I want to try out:
+
+* [Having external drive for booting windows](https://www.youtube.com/watch?v=jlcjCpqLr54)
+* [External ext4 drive for storing/using games while docked (with auto-mounting drive)](https://www.dexerto.com/tech/external-storage-on-steam-deck-1961757/)
+* [Further experiments with Steam link separate app on Windows](https://www.reddit.com/r/SteamDeck/comments/xgrvha/comment/iousx6b/)
+* [Try out decky plugins](https://decky.xyz/)
+* Formatting SD card to BTRFS. Apparently, both Windows and Linux may read and write to them.
+* write about Shader pre-caching
