@@ -4,22 +4,22 @@ What I use for my own Steam deck.
 ---
 
 ## Contents
-- [Hardware](#Hardware)
-  - [Model](#Model)
-  - [Docking station](#Docking-station)
-  - [Charger](#Charger)
-  - [Controllers](#Controllers)
-  - [SD Card](#SD-Card)
-- [Software](#Software)
-- [Other](#Other)
-- [SSH / File transfer](#SSH-File-transfer)
-- [Emulation](#Emulation)
-- [Launching non-Steam games](#Launching-non-Steam-games)
+- [Hardware](#hardware)
+  - [Model](#model)
+  - [Docking station](#docking-station)
+  - [Charger](#charger)
+  - [Controllers](#controllers)
+  - [SD Card](#sd-card)
+- [Software](#software)
+- [Other](#other)
+- [SSH / File transfer](#ssh-file-transfer)
+- [Emulation](#emulation)
+- [Launching other PC games](#launching-other-pc-games)
   - [Lutris](#lutris)
-- [External game resolutions and upscaling](#External-game-resolutions-and-upscaling)
-- [Streaming to other devices with Steam link](#Streaming-to-other-devices-with-Steam-link)
-- [Performance](#Performance)
-- [TODO List](#TODO-List)
+- [External game resolutions and upscaling](#external-game-resolutions-and-upscaling)
+- [Streaming to other devices with Steam link](#streaming-to-other-devices-with-steam-link)
+- [Performance](#performance)
+- [TODO List](#todo-list)
 ---
 ## Hardware
 ### Model
@@ -51,12 +51,15 @@ For reference when choosing SD cards:
 
 ![hard-sdcard.jpg](images/hard-sdcard.jpg)
 
+[`^        back to contents        ^`](#contents)
 ---
 ## Software
 * [EmuDeck](https://www.emudeck.com/) - Convenient tool for setting emulators up.
 * [Lutris](https://lutris.net/) - Installing games from `.exe`.
 * [Heroic](https://heroicgameslauncher.com/) - GOG and Epic Games Launcher.
 * [Cryo Utilities](https://github.com/CryoByte33/steam-deck-utilities) - Tweaking some of the settings (Swapfile, swap frequency, video memory).
+
+[`^        back to contents        ^`](#contents)
 ---
 ## Other
 * [SteamGridDB](https://www.steamgriddb.com/) - Setting up custom artwork for Steam Library.
@@ -68,6 +71,8 @@ For reference when choosing SD cards:
     * Heroes(Banner) - 1920x620 
     * Logo
 * GitHub repo [steam-deck-tricks](https://github.com/popsUlfr/steam-deck-tricks) - technical bits and pieces.
+
+[`^        back to contents        ^`](#contents)
 ---
 ## SSH File transfer
 ### Start
@@ -191,21 +196,29 @@ man scp
 
 ![ssh-advanced.jpg](images/ssh-advanced.jpg)
 * Done
+
+[`^        back to contents        ^`](#contents)
 ---
-## Launching non-Steam games
+## Launching other PC games
 ### Lutris
 You may use it to run Windows game, provided you have the installer for it. ~~Really convenient for pirated games~~.
 1. Install `Lutris`. For example, you can do it from 'Discover' store.
+
 ![lutris_lutris.jpg](images/lutris_lutris.jpg)
 2. Install `ProtonUp-Qt`.
+
 ![lutris_protonupqt.jpg](images/lutris_protonupqt.jpg)
 3. Download `Proton` for your games to use.
+
 ![lutris_protonupqt2.jpg.jpg](images/lutris_protonupqt2.jpg.jpg)
 4. Create folder for Lutris prefixes, wherever you like.
 5. Launch/Focus Lutris app. Select 'Add game' button located top-left, then 'Add locally installed game' button.
+
 ![lutris_localinstalled.jpg](images/lutris_localinstalled.jpg)
 6. Configure as follows and after that save changes:
+
 ![lutris_configure.jpg](images/lutris_configure.jpg)
+
    * `Game info` tab:
      - Choose the name for you game.
      - Select `Wine` as runner.
@@ -232,10 +245,11 @@ or more reliably do it within Steam:
     * Change properties of this game like so:
       * `Target:` "flatpak"
       * `Start in:` ""
-      * `Launch options:` run net.lutris.Lutris lutris:rungame/<here-goes-identifier-from-lutris-game-info>
+      * `Launch options:` run net.lutris.Lutris lutris:rungame/here-goes-identifier-from-lutris-game-info
 
 ![lutris_steamshortcut.jpg](images/lutris_steamshortcut.jpg)
 
+[`^        back to contents        ^`](#contents)
 ---
 ## Emulation
 
@@ -295,6 +309,8 @@ I had my left stick drifting downwards.
 * Navigate to settings.
 * Go to `Input` settings.
 * Put some deadzone on joysticks, like `0.20` on both sticks.
+
+[`^        back to contents        ^`](#contents)
 ---
 ## External game resolutions and upscaling
 [Check out source article](https://medium.com/@mohammedwasib/a-guide-to-a-good-docked-gaming-experience-on-the-steam-deck-346e393b657a)
@@ -320,6 +336,8 @@ Steam OS upscaling can be set in the overlay:
 * SteamOS Upscaling — **Integer** looks the next best at integer scaling resolutions (1:2, 1:3) and costs nothing.
 * SteamOS Upscaling — **Nearest** is the same as Integer at integer resolutions, but not as good at non integer resolutions. Cost is minimal too.
 * SteamOS Upscaling — **Linear** looks the worst and introduces blur at low resolutions, but costs nothing.
+
+[`^        back to contents        ^`](#contents)
 ---
 ## Streaming to other devices with Steam link
 If you want to use your laptop, tablet or phone as display,
@@ -395,6 +413,7 @@ it thinks bandwidth is better via Wi-Fi.
 * Wires
 * Might be weird, if your bandwidth is better on Wi-Fi than on Ethernet
 
+[`^        back to contents        ^`](#contents)
 ---
 ## Performance
 ### Swapfile, VRAM and swap frequency
@@ -451,6 +470,8 @@ Lock the framerate limit to 30 and disable any in-game vsync.
 ### More power to CPU
 In CPU-heavy games, try to give CPU some more power budget by locking 
 the GPU frequency to a lower value like 1200mhz.
+
+[`^        back to contents        ^`](#contents)
 ---
 ## TODO List
 Generally, it's the stuff I want to try out:
