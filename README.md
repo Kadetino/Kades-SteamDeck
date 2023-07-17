@@ -361,9 +361,10 @@ Useful when:
 * Using OBS on your laptop to record gameplay from your Steam deck.
 * Needing another display which has brains of it's own and doesn't work like
 external monitor or TV.
+* Separate Steam link app for Windows 10 is really great for using deck desktop mode.
 
-### PC (Laptop/Desktop)
-* Needs Steam client installed on PC and both devices be logged on in the same account.
+### PC (Laptop/Desktop) - Steam app installed
+* Needs Steam app installed on PC and both devices be logged on in the same account.
 * Might need to enable Remote play in the Steam settings.
 
 ![steamlink-remoteplay.jpg](images/steamlink-remoteplay.jpg)
@@ -374,7 +375,7 @@ arrow down, next to `Install`/`Play`/`Stream`, to select device that will run th
 
 ![steamlink-button.jpg](images/steamlink-button.jpg)
 
-### Mobile devices (Tablets/Phones)
+### Mobile devices (Tablets/Phones) and separate Windows 10 app
 * Download Steam link to your device.
 * Follow in-app instructions.
 * Pretty much the same as PC.
@@ -494,7 +495,7 @@ Here what I tried so far:
 * [Controller Tools](https://github.com/alphamercury/ControllerTools) - Displays the connection type (Bluetooth, USB), current battery %, and charging status.
 * [vibrantDeck](https://github.com/libvibrant/vibrantDeck) - Adjust screen saturation & gamme.
 * [AutoFlatpaks](https://beta.deckbrew.xyz/) - Automatically updates available flatpaks without going into the desktop mode.
-* [ProtonDB Badges](https://github.com/OMGDuke/protondb-decky) - Display tappable ProtonDB badges on your game pages
+* [ProtonDB Badges](https://github.com/OMGDuke/protondb-decky) - Display tappable ProtonDB badges on your game pages.
 * [Storage Cleaner](https://github.com/mcarlucci/decky-storage-cleaner) - Clear shader cache and compatibility data to free up storage space.
 * [SteamGridDB](https://github.com/SteamGridDB/decky-steamgriddb) - Browse and manage Steam artwork from SteamGridDB from within gaming mode.
 * [How Long To Beat for Deck](https://github.com/hulkrelax/hltb-for-deck) - A plugin to show you game lengths according to How Long To Beat.
