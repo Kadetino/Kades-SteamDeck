@@ -10,8 +10,7 @@ What I use for my own Steam deck.
   - [Charger](#charger)
   - [Controllers](#controllers)
   - [SD Card](#sd-card)
-- [Software](#software)
-- [Other](#other)
+- [Software & other helpful stuff](#software--other-helpful-stuff)
 - [SSH / File transfer](#ssh-file-transfer)
 - [Emulation](#emulation)
 - [Launching other PC games](#launching-other-pc-games)
@@ -19,8 +18,12 @@ What I use for my own Steam deck.
 - [External game resolutions and upscaling](#external-game-resolutions-and-upscaling)
 - [Streaming to other devices with Steam link](#streaming-to-other-devices-with-steam-link)
 - [Performance](#performance)
+- [Decky Loader plugins](#decky-loader-plugins)
 - [TODO List](#todo-list)
+
+
 ---
+
 ## Hardware
 ### Model
 * Steam Deck 256GB
@@ -52,18 +55,20 @@ For reference when choosing SD cards:
 ![hard-sdcard.jpg](images/hard-sdcard.jpg)
 
 [`^        back to contents        ^`](#contents)
+
 ---
-## Software
+## Software & other helpful stuff
 * [EmuDeck](https://www.emudeck.com/) - Convenient tool for setting emulators up.
+[My experience.](#emulation)
 * [Lutris](https://lutris.net/) - Installing games from `.exe`.
+[My experience.](#lutris)
 * [Heroic](https://heroicgameslauncher.com/) - GOG and Epic Games Launcher.
 * [Cryo Utilities](https://github.com/CryoByte33/steam-deck-utilities) - Tweaking some of the settings (Swapfile, swap frequency, video memory).
-
-[`^        back to contents        ^`](#contents)
----
-## Other
+* [Decky Plugin Loader](https://decky.xyz/) - Plugin loader for Steam deck. 
+[My experience.](#decky-loader-plugins)
 * [SteamGridDB](https://www.steamgriddb.com/) - Setting up custom artwork for Steam Library.
-  * Mostly useful for non-Steam games, such as ones added from Lutris. 
+  * Mostly useful for non-Steam games, such as ones added from Lutris.
+  * Also available as one of the [Decky Loader plugins](#decky-loader-plugins).
   * Note that there are 5 places for artwork to be set up:
     * Grid (Tile) - 600x900
     * Grid (Recently played) - 920x430
@@ -72,7 +77,9 @@ For reference when choosing SD cards:
     * Logo
 * GitHub repo [steam-deck-tricks](https://github.com/popsUlfr/steam-deck-tricks) - technical bits and pieces.
 
+
 [`^        back to contents        ^`](#contents)
+
 ---
 ## SSH File transfer
 ### Start
@@ -198,27 +205,22 @@ man scp
 * Done
 
 [`^        back to contents        ^`](#contents)
+
 ---
 ## Launching other PC games
 ### Lutris
 You may use it to run Windows game, provided you have the installer for it. ~~Really convenient for pirated games~~.
-1. Install `Lutris`. For example, you can do it from 'Discover' store.
-
+1. Install `Lutris`. For example, you can do it from 'Discover' store.<br />
 ![lutris_lutris.jpg](images/lutris_lutris.jpg)
-2. Install `ProtonUp-Qt`.
-
+2. Install `ProtonUp-Qt`.<br />
 ![lutris_protonupqt.jpg](images/lutris_protonupqt.jpg)
-3. Download `Proton` for your games to use.
-
+3. Download `Proton` for your games to use.<br />
 ![lutris_protonupqt2.jpg.jpg](images/lutris_protonupqt2.jpg.jpg)
-4. Create folder for Lutris prefixes, wherever you like.
-5. Launch/Focus Lutris app. Select 'Add game' button located top-left, then 'Add locally installed game' button.
-
+4. Create folder for Lutris prefixes, wherever you like.<br />
+5. Launch/Focus Lutris app. Select 'Add game' button located top-left, then 'Add locally installed game' button.<br />
 ![lutris_localinstalled.jpg](images/lutris_localinstalled.jpg)
-6. Configure as follows and after that save changes:
-
-![lutris_configure.jpg](images/lutris_configure.jpg)
-
+6. Configure as follows and after that save changes:<br />
+![lutris_configure.jpg](images/lutris_configure.jpg)<br />
    * `Game info` tab:
      - Choose the name for you game.
      - Select `Wine` as runner.
@@ -226,8 +228,8 @@ You may use it to run Windows game, provided you have the installer for it. ~~Re
      - Select wine prefix folder that was created earlier.
    * `Runner options` tab:
      - Select `lutris-GE-Proton#-##`.
-7. Click on newly added game and then click `Run EXE inside Wine prefix` button.
-8. Select your installer and let it do it's work.
+7. Click on newly added game and then click `Run EXE inside Wine prefix` button.<br />
+8. Select your installer and let it do it's work.<br />
 9. After the installation is done, right click the game in Lutris and then click `Configure`:
    * `Game Options` tab:
      - Select executable file for Executable path (e.g. file to launch the game).
@@ -250,6 +252,7 @@ or more reliably do it within Steam:
 ![lutris_steamshortcut.jpg](images/lutris_steamshortcut.jpg)
 
 [`^        back to contents        ^`](#contents)
+
 ---
 ## Emulation
 
@@ -311,6 +314,7 @@ I had my left stick drifting downwards.
 * Put some deadzone on joysticks, like `0.20` on both sticks.
 
 [`^        back to contents        ^`](#contents)
+
 ---
 ## External game resolutions and upscaling
 [Check out source article](https://medium.com/@mohammedwasib/a-guide-to-a-good-docked-gaming-experience-on-the-steam-deck-346e393b657a)
@@ -338,6 +342,7 @@ Steam OS upscaling can be set in the overlay:
 * SteamOS Upscaling — **Linear** looks the worst and introduces blur at low resolutions, but costs nothing.
 
 [`^        back to contents        ^`](#contents)
+
 ---
 ## Streaming to other devices with Steam link
 If you want to use your laptop, tablet or phone as display,
@@ -414,6 +419,7 @@ it thinks bandwidth is better via Wi-Fi.
 * Might be weird, if your bandwidth is better on Wi-Fi than on Ethernet
 
 [`^        back to contents        ^`](#contents)
+
 ---
 ## Performance
 ### Swapfile, VRAM and swap frequency
@@ -472,13 +478,37 @@ In CPU-heavy games, try to give CPU some more power budget by locking
 the GPU frequency to a lower value like 1200mhz.
 
 [`^        back to contents        ^`](#contents)
+
+---
+## Decky Loader plugins
+> Decky Loader is a homebrew plugin launcher for the Steam Deck.
+
+![decky-decky.jpg](images/decky-decky.jpg)
+
+It can be downloaded [here](https://github.com/SteamDeckHomebrew/decky-loader). 
+It allows for you to install various plugins that make some of the things much easier 
+and more cool looking.
+
+To install them, you can use built-in plugin store within gaming mode. 
+Here what I tried so far:
+* [Controller Tools](https://github.com/alphamercury/ControllerTools) - Displays the connection type (Bluetooth, USB), current battery %, and charging status.
+* [vibrantDeck](https://github.com/libvibrant/vibrantDeck) - Adjust screen saturation & gamme.
+* [AutoFlatpaks](https://beta.deckbrew.xyz/) - Automatically updates available flatpaks without going into the desktop mode.
+* [ProtonDB Badges](https://github.com/OMGDuke/protondb-decky) - Display tappable ProtonDB badges on your game pages
+* [Storage Cleaner](https://github.com/mcarlucci/decky-storage-cleaner) - Clear shader cache and compatibility data to free up storage space.
+* [SteamGridDB](https://github.com/SteamGridDB/decky-steamgriddb) - Browse and manage Steam artwork from SteamGridDB from within gaming mode.
+* [How Long To Beat for Deck](https://github.com/hulkrelax/hltb-for-deck) - A plugin to show you game lengths according to How Long To Beat.
+* [CSSLoader](https://github.com/suchmememanyskill/SDH-CssLoader) - Customizing the look of the user interface.
+
+[`^        back to contents        ^`](#contents)
+
 ---
 ## TODO List
 Generally, it's the stuff I want to try out:
 
 * [Having external drive for booting windows](https://www.youtube.com/watch?v=jlcjCpqLr54)
 * [External ext4 drive for storing/using games while docked (with auto-mounting drive)](https://www.dexerto.com/tech/external-storage-on-steam-deck-1961757/)
-* [Further experiments with Steam link separate app on Windows](https://www.reddit.com/r/SteamDeck/comments/xgrvha/comment/iousx6b/)
-* [Try out decky plugins](https://decky.xyz/)
 * Formatting SD card to BTRFS. Apparently, both Windows and Linux may read and write to them.
-* write about Shader pre-caching
+* Getting PS4 to test [Chiaki](https://git.sr.ht/~thestr4ng3r/chiaki). Probably won't happen.
+* [Trying deck together with PS3](https://www.reddit.com/r/SteamDeck/comments/xgs7t8/streaming_any_ps3_game_to_the_steam_deck/).
+* Maybe trying [Moonlight](https://moonlight-stream.org/).
