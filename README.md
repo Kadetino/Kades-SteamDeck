@@ -19,6 +19,7 @@ What I use for my own Steam deck.
 - [Streaming to other devices with Steam link](#streaming-to-other-devices-with-steam-link)
 - [Performance](#performance)
 - [Decky Loader plugins](#decky-loader-plugins)
+- [Windows 11 from microSD card/External SSD](#windows-11-from-microsd-cardexternal-ssd)
 - [TODO List](#todo-list)
 
 
@@ -47,6 +48,7 @@ What I use for my own Steam deck.
 * Kingston Canvas Go! Plus 256GB
 
 The Steam Deck supports `SD`, `SDHC` and `SDXC` cards. 
+Important note: only `UHS-I` is supported.
 
 Generally, application class `A2` is good.
 
@@ -504,12 +506,41 @@ Here what I tried so far:
 [`^        back to contents        ^`](#contents)
 
 ---
+## Windows 11 from MicroSD card/External SSD
+If you want to run Windows 10 or Windows 11 on your Steam Deck, you can install it on microSD card or external SSD.
+
+Note that USB-C 3.2 Gen2, used for both power and data transfer, will be better than microSD slot that supports only `UHS-I`. 
+
+1. Get Windows 10 or Windows 11 `.iso` file.
+2. Download [Rufus](https://rufus.ie/) for your other computer to flash the `.iso` file.
+3. Select your microSD card or SSD. You might need to tick 'List USB drives' box.\
+![Win11-Rufus1.jpg](images/Win11-Rufus1.jpg)
+4. Change 'Image option' to 'Windows To Go'. The rest of the settings may be left as they are.
+5. Select version(edition) of Windows you want to install.
+6. Select 'Prevent Windows to Go from accessing internal disks' to make sure that Windows 
+won't interact with internal SSD.\
+![Win11-Rufus2.jpg](images/Win11-Rufus2.jpg)
+7. Turn off your Steam Deck. Hold `Volume up` button and whilst holding it press `Power` button.
+8. Select boot manager. Boot from your microSD/SSD.
+9. Download [Steam Deck drivers](https://help.steampowered.com/en/faqs/view/6121-ECCD-D643-BAA8) for Windows. 
+(Alternatively, you may search for `Steam Deck - Windows Resources`.)
+10. Install downloaded drivers:
+    * APU driver - run `setup.exe` to install.
+    * Wi-Fi driver - run `install.bat` to install.
+    * Bluetooth driver - run `installdriver.cmd` to install.
+    * SD Card reader driver - run `setup.exe` to install.
+    * Audio drivers:
+      * Download driver 1/2, right click `cs35l41.inf` and select Install.
+      * Download driver 2/2, right click `NAU88L21.inf` and select Install.
+      * Don't forget to get the updated APU driver above for audio support.
+
+[`^        back to contents        ^`](#contents)
+
+---
 ## TODO List
 Generally, it's the stuff I want to try out:
 
-* [Having external drive for booting windows](https://www.youtube.com/watch?v=jlcjCpqLr54)
-* [External ext4 drive for storing/using games while docked (with auto-mounting drive)](https://www.dexerto.com/tech/external-storage-on-steam-deck-1961757/)
-* Formatting SD card to BTRFS. Apparently, both Windows and Linux may read and write to them.
 * Getting PS4 to test [Chiaki](https://git.sr.ht/~thestr4ng3r/chiaki). Probably won't happen.
 * [Trying deck together with PS3](https://www.reddit.com/r/SteamDeck/comments/xgs7t8/streaming_any_ps3_game_to_the_steam_deck/).
 * Maybe trying [Moonlight](https://moonlight-stream.org/).
+* Power passthrough
