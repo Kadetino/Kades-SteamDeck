@@ -46,6 +46,7 @@ What I use for my own Steam deck.
   * You may change controller LED color in Steam controller settings.
 ### SD Card
 * Kingston Canvas Go! Plus 256GB
+* Samsung EVO Plus 512GB
 
 The Steam Deck supports `SD`, `SDHC` and `SDXC` cards. 
 Important note: only `UHS-I` is supported.
@@ -496,12 +497,14 @@ To install them, you can use built-in plugin store within gaming mode.
 Here what I tried so far:
 * [Controller Tools](https://github.com/alphamercury/ControllerTools) - Displays the connection type (Bluetooth, USB), current battery %, and charging status.
 * [vibrantDeck](https://github.com/libvibrant/vibrantDeck) - Adjust screen saturation & gamme.
-* [AutoFlatpaks](https://beta.deckbrew.xyz/) - Automatically updates available flatpaks without going into the desktop mode.
+* [AutoFlatpaks](https://github.com/jurassicplayer/decky-autoflatpaks) - Automatically updates available flatpaks without going into the desktop mode.
 * [ProtonDB Badges](https://github.com/OMGDuke/protondb-decky) - Display tappable ProtonDB badges on your game pages.
 * [Storage Cleaner](https://github.com/mcarlucci/decky-storage-cleaner) - Clear shader cache and compatibility data to free up storage space.
 * [SteamGridDB](https://github.com/SteamGridDB/decky-steamgriddb) - Browse and manage Steam artwork from SteamGridDB from within gaming mode.
 * [How Long To Beat for Deck](https://github.com/hulkrelax/hltb-for-deck) - A plugin to show you game lengths according to How Long To Beat.
 * [CSSLoader](https://github.com/suchmememanyskill/SDH-CssLoader) - Customizing the look of the user interface.
+* [AutoSuspend](https://github.com/jurassicplayer/decky-autosuspend) - Trigger alerts. Nice for battery percentage notifications.
+* [Pause Games](https://github.com/popsUlfr/SDH-PauseGames) - Allows to pause games.
 
 [`^        back to contents        ^`](#contents)
 
